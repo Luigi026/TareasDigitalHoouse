@@ -1,14 +1,15 @@
 
 /*
 Escribí la función puedeJubilarse que recibe por parámetro la edad, el género y además,
- los años de aportes jubilatorios (en ese orden)que posee una persona, ejemplo:
+los años de aportes jubilatorios (en ese orden)que posee una persona, ejemplo:
 puedeJubilarse(62, 'F', 34);
-// Ésto da como resultado true ya que cumple con las tres condiciones.
+Ésto da como resultado true ya que cumple con las tres condiciones.
 Tené en cuenta que el mínimo de edad para realizar el trámite para las mujeres (género "F") es de 60 años,
 mientras que para los hombres (género "M") es 65. En ambos casos, se deben contar con al menos 30 años de aportes jubilatorios.
 Te recomendamos que primero trates de resolver el ejercicio, después fijate lo que sigue y si podes resolverlo de ésta otra manera, 
 deberíamos usar funciones dentro de otra función, eso ya lo hicimos en funcionception , ¿Lo recordás?
 ¿Y si delegamos parte de la funcionalidad en otra función? Podríamos separar la lógica de la siguiente manera:
+
 function puedeJubilarse(edad, genero, aniosAporte) {
     return  estaEnEdad(edad, genero) && tieneSuficientesAportes(aniosAporte);
 }
@@ -18,7 +19,7 @@ Al delegar correctamente hay veces en las que no es necesario alterar el orden d
 1
 */
 
-/*
+
 //   PRIMERA FORMA DE RESOLVER
 
 
@@ -26,10 +27,8 @@ const puedeJubilarse = function(edad,genero,aniosAporte){
     return (edad >= 60 && genero === "femenino" && aniosAporte >=30) || (edad >= 65 && genero === "masculino" && aniosAporte >=30);
 }
 console.log(puedeJubilarse(25,"masculino",10));
+_____________________________________________________________________________________________________________________________________________________________-___
 
-*/
-
-/*
 //   SEGUNDA FORMA DE RESOLVER 
 
 const estaEnEdad = function(edad,genero) {
@@ -46,8 +45,8 @@ const puedeJubilrse = function(edad,genero,aniosAportes) {
   }
 };
 console.log(puedeJubilrse(66,"M",40));
-*/
-/*
+__________________________________________________________________________________________________________________________________________________________________
+
 //    TERCERA FORMA DE RESOLVER
 
 const puedeJubilarse = function(e, g, ap){
@@ -60,8 +59,8 @@ const puedeJubilarse = function(e, g, ap){
     }   
 }
 console.log(puedeJubilarse(56,"F",40));
-*/
-/*
+____________________________________________________________________________________________________________________________________________________________________
+
 //    CUARTA FORMA DE RESOLVER
 
 const estaEnEdad = function(e,g){
@@ -85,7 +84,8 @@ const puedeJubilarse2 = function(e, g, ap) {
 
 }
 console.log(puedeJubilarse2(65,"M",30));
-*/
+____________________________________________________________________________________________________________________________________________________________________
+
 //    QUINTA FORMA DE RESOLVER
 
 function puedeJubilarse(edad, genero,aniosAporte){
